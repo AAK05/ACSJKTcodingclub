@@ -1,0 +1,7 @@
+name = input("What is your name?")
+age = input("What is your age?")
+status = input("What is your job status?")
+print("-"*15)
+print("name:",name)
+print("age:",age)
+print("status:",status)
