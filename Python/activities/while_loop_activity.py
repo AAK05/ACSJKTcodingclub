@@ -1,6 +1,6 @@
 """
-Activity: Write a script which asks for the user’s full name and gender. If gender is female, 
-ask for marital status of user. If user is male, print “Hello Mr {name}”. If user is female and married, 
+Activity: Write a script which asks for the user’s full name and gender. If user is male, print “Hello Mr {name}”.
+If gender is female, ask for marital status of user. If user is female and married, 
 print “Hello Mrs {name}”. If user is female and unmarried, print “Hello Ms {name}”. 
 Make sure the script asks again for the gender or marital status if an unsuitable answer is provided 
 (e.g: the question is “Please enter your gender [M/F]”, and the answer was “123”, print(“invalid response”) before asking again)
