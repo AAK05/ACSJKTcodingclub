@@ -2,7 +2,7 @@
 Activity: Create a script which asks for a number and then calculates the factorial of that number
     E.g: If the number entered was 4, then print the number 24 because 4!=4*3*2*1=24. Note: 0!=1
 If the user entered something other than "0" or a positive integer, print("Invalid response") and ask again
-    i.e: Do not accept negative numbers or letters
+    i.e: Do not accept negative numbers, decimal numbers or letters
 If the user entered a number larger than 100000 (one hundred thousand), print("Number too large") and ask again
 
 Hint: Create a list of all the numbers to multiply together, then use a for loop to find the product of the numbers in the list
