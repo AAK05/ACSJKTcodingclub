@@ -22,9 +22,14 @@ while numbervalid == False:
         print("Invalid response")
 
 lst = [] #Creates list in a variable
+for i in range(number):
+    lst.append(i+1)
+"""
+Alternative way of creating list of items to multiply:
 while number > 0:
     lst.append(number) #Appends the number to the list
     number -= 1 #Increments the number down by one to add the next number to the list
+"""
 
 output = 1 #Initializes output variable as 1
 for item in lst:
