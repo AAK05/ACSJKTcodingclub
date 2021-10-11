@@ -22,8 +22,8 @@ while numbervalid == False:
         print("Invalid response")
 
 lst = [] #Creates list in a variable
-for i in range(number):
-    lst.append(i+1)
+for i in range(number): #iterating through range(number) iterates through i=0,i=1,i=2 ... i=(number-1)
+    lst.append(i + 1) #Add 1 to every iteration to make the list [1,2,...,number] instead of [0,1,...,(number-1)]
 """
 Alternative way of creating list of items to multiply:
 while number > 0:
