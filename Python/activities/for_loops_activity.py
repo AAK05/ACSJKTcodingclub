@@ -5,6 +5,9 @@ If the user entered something other than "0" or a positive integer, print("Inval
     i.e: Do not accept negative numbers, decimal numbers or letters
 If the user entered a number larger than 100000 (one hundred thousand), print("Number too large") and ask again
 
+Note: For those of you advanced enough to try using recursion on this, you will probably hit a maximum recursion depth for numbers over 1000, so it won't work.
+And for those of you even more advanced enough to disable recursion limits, then I trust that you already understand for loops by now.
+
 Hint: Create a list of all the numbers to multiply together, then use a for loop to find the product of the numbers in the list
 """
 numbervalid = False #Variable to check if input is valid
