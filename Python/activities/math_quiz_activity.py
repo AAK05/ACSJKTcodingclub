@@ -37,7 +37,7 @@ for qn in range(1,11): #Iterates through questions number 1-10
 #Ask the questions:
 score = 0 #Variable to store score count
 for key in questions: #Iterates through questions number 1-10
-    formattedqn = str(key) + ". " + questions[key] + " =" #Generates a formatted string out of the question number and question
+    formattedqn = str(key) + ". " + questions[key] + " = " #Generates a formatted string out of the question number and question
     validans = False #Variable which becomes True when a valid answer is received
     while not validans: #While loop to ensure question is continuously asked until valid answer is received
         ans = input(formattedqn)
