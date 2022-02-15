@@ -8,14 +8,14 @@ The function to remove even numbers should be defined in the same file
 """
 from definitions import fibonacci
 
-def remove_even(sequence):
-    newsequence = []
-    for i in sequence:
-        if i%2!=0:
+def remove_even(sequence): #Defines a function to remove even numbers from a sequence
+    newsequence = [] #Creates a new list where we store the odd numbers
+    for i in sequence: #Iterates through the old list
+        if i%2!=0: #If not even, then append to new list
             newsequence.append(i)
-    return newsequence
+    return newsequence #return new list
 
-def main():
+def main(): #Defines a main function where the main tasks will be executed
     validans = False
     while validans == False:
         try:
@@ -26,9 +26,9 @@ def main():
                 print("Please enter a positive integer")
         except:
             print("Please enter a positive integer")
-    original_fibonacci = fibonacci(3*n)
-    print(original_fibonacci)
-    modified_fibonacci = remove_even(original_fibonacci)
-    print(modified_fibonacci[0:n])
+    #Above code is to obtain user input and ensure correct input is given
+    original_fibonacci = fibonacci(3*n) #Generates first 3n terms, generating more than needed just in case
+    modified_fibonacci = remove_even(original_fibonacci) #Removes even numbers from original sequence to create modified sequence
+    print(modified_fibonacci[0:n]) #prints the first n terms from modified sequence
 
-main()
+main() #executes main
