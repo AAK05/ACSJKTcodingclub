@@ -11,8 +11,11 @@ Tips: Install pytube and checkout the pytube library documentation to see how to
 url = input("Please enter video URL") #Asks for url
 yt = YouTube(url) #Creates a youtube object
 title = yt.title #Get title of video
-title = title.replace(" ", "")
+title = title.replace(" ", "_")
 filename = title + ".mp4"
+#This example uses adaptive streams for 1080p resolution downloads
+#This is because progressive streams do not support 1080p
+#However, it is entirely possible to do this exercise using progressive streams without 1080p capability
 try: #Try and except blocks to see which resolution of video is available
     vidstream = yt.streams.filter(file_extension="mp4").filter(res="1080p").first() #Get videostream
 except:
@@ -26,8 +29,8 @@ except:
 audiostream = yt.streams.filter(only_audio=True).first() #Get audiostream
 vidstream.download(filename="vidtemp") #Download videostream
 audiostream.download(filename="audiotemp") #Download audiostream
-#command = r"C:\FFmpeg\bin\ffmpeg.exe -i vidtemp -i audiotemp -c:v copy -c:a aac {}".format(filename)
-command = r"C:\FFmpeg\bin\ffmpeg.exe -i vidtemp -i audiotemp -c:v copy -c:a aac output.mp4" #Use FFmpeg to combine audio and video streams
+command = r"C:\FFmpeg\bin\ffmpeg.exe -i vidtemp -i audiotemp -c:v copy -c:a aac {}".format(filename) #Use FFmpeg to combine audio and video streams, filename vid title
+#command = r"C:\FFmpeg\bin\ffmpeg.exe -i vidtemp -i audiotemp -c:v copy -c:a aac output.mp4" #Use FFmpeg to combine audio and video streams, filename output
 os.system(command)
 os.remove("vidtemp") #Delete temporary videostream
 os.remove("audiotemp") #Delete temporary audiostream
