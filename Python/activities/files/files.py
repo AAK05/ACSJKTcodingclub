@@ -14,6 +14,9 @@ Instructions:
 
 Important tip:
     Make sure you run the script from the directory where the files are located
+
+Resources:
+    https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 """
 
 clean = [] #Initializes list for @gmail.com emails
