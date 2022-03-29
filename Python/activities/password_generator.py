@@ -17,7 +17,7 @@ Tip: use the library called 'string', 'random', 'pyperclip'
         random.choice() randomly selects a character from a string
     'pyperclip' library allows copying to clipboard
         To install, type "pip install pyperclip" for windows, or "pip3 install pyperclip" for mac
-        clip() copies to clipboard
+        pyperclip.copy() copies to clipboard
         pyperclip.paste() returns the item that was in the clipboard
 """
 
