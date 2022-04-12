@@ -6,6 +6,7 @@ Activity: Create a metronome script that plays a beep at the specified speed in 
 
 Ask the user how many BPM
 Play beeps using winsound.Beep(Hz,ms)
+    If using mac, then use print("\a") to make a beep
 Use time.sleep(t) to wait for next beep
 Keep repeating with no end to script
 
