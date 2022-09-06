@@ -2,8 +2,8 @@ from email.message import EmailMessage
 import os
 import mimetypes
 import smtplib
-#import getpass
 
+#Define sender email
 sender = "aak.automated@aol.com"
 
 #Initialize emailmessage object
@@ -22,15 +22,16 @@ If you receive this, then it worked!
 Attached is a jpg image of raja ampat, to test email attachments.
 
 Adrien"""
+#Use the .set_content() method on the EmailMessage object to determine the email body.
 message.set_content(body)
 
 #Adding attachments
 attachment_path = "C:\\Users\\Adrien\\OneDrive\\Documents\\Python\\Learning\\e-mail\\DJI_0148.JPG"
 attachment_file = os.path.basename(attachment_path)
 print(str(attachment_file))
-mime_type , _ = mimetypes.guess_type(attachment_path) #guess_type returns a tuple, but only index 0 relevant
-#print(mime_type)
-mimetype,subtype = mime_type.split("/",1) #separate into type and subtype
+mime_type_subtype , _ = mimetypes.guess_type(attachment_path) #guess_type returns a tuple, but only index 0 relevant
+print(mime_type_subtype)
+mimetype,subtype = mime_type_subtype.split("/",1) #separate into type and subtype
 #print(mimetype,subtype)
 with open(attachment_path,"rb") as ap:
     message.add_attachment(ap.read(), maintype=mimetype,subtype=subtype,filename=attachment_file)
